@@ -85,17 +85,18 @@ export default function MultiStepForm() {
         },
         finalNote: {
           whyJoin: formData.whyMocha,
-          extraInfo: formData.additionalNote,
+          extraInfo: formData.additionalNote || null,
           socialLinks: {
-            linkedin: formData.profileLink?.includes("linkedin")
-              ? formData.profileLink
-              : undefined,
-            instagram: formData.profileLink?.includes("instagram")
-              ? formData.profileLink
-              : undefined,
+            ...(formData.profileLink?.includes("linkedin")
+              ? { linkedin: formData.profileLink }
+              : {}),
+            ...(formData.profileLink?.includes("instagram")
+              ? { instagram: formData.profileLink }
+              : {}),
           },
           consent: Boolean(formData.consent),
         },
+
         meta: {
           createdAt: serverTimestamp(), // ✅ real value, not type
           status: "new",

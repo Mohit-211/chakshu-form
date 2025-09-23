@@ -1,14 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
+import { CheckCircle, HeartHandshake, Shield, Clock } from "lucide-react";
 
 export default function Intro() {
   const navigate = useNavigate();
 
-  console.log("✅ Intro component mounted");
-
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-rose-50 to-rose-100 px-6 py-12">
+    <section className="min-h-screen flex items-center justify-center bg-background px-6 py-12">
       <Card className="max-w-2xl w-full shadow-luxury bg-card/90 backdrop-blur-sm">
         <CardContent className="p-10 text-center space-y-8">
           {/* Title */}
@@ -27,35 +26,52 @@ export default function Intro() {
             experience.
           </p>
 
-          {/* Key Points */}
-          <ul className="space-y-4 text-left list-disc list-inside text-muted-foreground font-body">
-            <li>
-              Answer around{" "}
-              <span className="text-foreground font-semibold">
-                50 questions
+          {/* Key Points with Icons */}
+          <div className="space-y-4 text-left font-body text-muted-foreground">
+            <div className="flex items-start gap-3">
+              <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+              <span>
+                Answer around{" "}
+                <span className="text-foreground font-semibold">
+                  50 questions
+                </span>{" "}
+                designed to go deeper than just hobbies and job titles.
               </span>
-              designed to go deeper than just hobbies and job titles.
-            </li>
-            <li>
-              Take about{" "}
-              <span className="text-foreground font-semibold">10 minutes</span>{" "}
-              — honesty matters more than speed.
-            </li>
-            <li>
-              Your profile stays{" "}
-              <span className="text-foreground font-semibold">
-                private and secure
+            </div>
+
+            <div className="flex items-start gap-3">
+              <Clock className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+              <span>
+                Take about{" "}
+                <span className="text-foreground font-semibold">
+                  10 minutes
+                </span>{" "}
+                — honesty matters more than speed.
               </span>
-              . Only used to make meaningful matches.
-            </li>
-            <li>
-              We value{" "}
-              <span className="text-foreground font-semibold">
-                authenticity
-              </span>{" "}
-              — the more real you are, the better your experience.
-            </li>
-          </ul>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <Shield className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+              <span>
+                Your profile stays{" "}
+                <span className="text-foreground font-semibold">
+                  private and secure
+                </span>
+                . Only used to make meaningful matches.
+              </span>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <HeartHandshake className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+              <span>
+                We value{" "}
+                <span className="text-foreground font-semibold">
+                  authenticity
+                </span>{" "}
+                — the more real you are, the better your experience.
+              </span>
+            </div>
+          </div>
 
           {/* CTA */}
           <div className="pt-6 space-y-2">
