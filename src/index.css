@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Luxury Matchmaking Color Palette */
+    --background: 33 50% 96%; /* Warm ivory #FAF6F0 */
+    --foreground: 0 0% 18%; /* Dark charcoal #2E2E2E */
+
+    --card: 33 50% 98%;
+    --card-foreground: 0 0% 18%;
+
+    --popover: 33 50% 96%;
+    --popover-foreground: 0 0% 18%;
+
+    --primary: 0 47% 32%; /* Deep maroon #7B2E2E */
+    --primary-foreground: 33 50% 96%;
+
+    --secondary: 33 50% 96%;
+    --secondary-foreground: 0 47% 32%;
+
+    --muted: 33 30% 92%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 36 40% 58%; /* Muted gold #C89F65 */
+    --accent-foreground: 0 0% 18%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 33 50% 96%;
+
+    --border: 33 20% 88%;
+    --input: 33 20% 88%;
+    --ring: 0 47% 32%;
+
+    --radius: 0.75rem;
+
+    /* Custom luxury tokens */
+    --maroon: 0 47% 32%;
+    --maroon-light: 0 47% 40%;
+    --maroon-dark: 0 47% 25%;
+    --gold: 36 40% 58%;
+    --gold-light: 36 40% 68%;
+    --ivory: 33 50% 96%;
+    --charcoal: 0 0% 18%;
+    --charcoal-light: 0 0% 35%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--maroon-dark)) 100%
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(var(--accent)) 0%,
+      hsl(var(--gold-light)) 100%
+    );
+    --gradient-subtle: linear-gradient(
+      180deg,
+      hsl(var(--background)) 0%,
+      hsl(var(--muted)) 100%
+    );
+
+    /* Shadows */
+    --shadow-luxury: 0 10px 40px -10px hsl(var(--primary) / 0.15);
+    --shadow-elegant: 0 4px 20px -2px hsl(var(--primary) / 0.1);
+    --shadow-soft: 0 2px 10px -2px hsl(var(--primary) / 0.05);
+
+    /* Animations */
+    --transition-luxury: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 33 50% 96%;
+    --sidebar-foreground: 0 0% 18%;
+    --sidebar-primary: 0 47% 32%;
+    --sidebar-primary-foreground: 33 50% 96%;
+    --sidebar-accent: 33 30% 92%;
+    --sidebar-accent-foreground: 0 47% 32%;
+    --sidebar-border: 33 20% 88%;
+    --sidebar-ring: 0 47% 32%;
+  }
+
+  .dark {
+    /* Luxury dark mode - elegant evening palette */
+    --background: 0 0% 8%;
+    --foreground: 33 50% 96%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 33 50% 96%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 33 50% 96%;
+
+    --primary: 0 47% 45%;
+    --primary-foreground: 33 50% 96%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 33 50% 96%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 36 40% 65%;
+    --accent-foreground: 0 0% 8%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 33 50% 96%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 47% 45%;
+
+    --maroon: 0 47% 45%;
+    --maroon-light: 0 47% 55%;
+    --maroon-dark: 0 47% 35%;
+    --gold: 36 40% 65%;
+    --gold-light: 36 40% 75%;
+    --ivory: 33 50% 96%;
+    --charcoal: 0 0% 8%;
+    --charcoal-light: 0 0% 25%;
+
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--maroon-dark)) 100%
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(var(--accent)) 0%,
+      hsl(var(--gold-light)) 100%
+    );
+    --gradient-subtle: linear-gradient(
+      180deg,
+      hsl(var(--background)) 0%,
+      hsl(var(--muted)) 100%
+    );
+
+    --shadow-luxury: 0 10px 40px -10px hsl(0 0% 0% / 0.3);
+    --shadow-elegant: 0 4px 20px -2px hsl(0 0% 0% / 0.2);
+    --shadow-soft: 0 2px 10px -2px hsl(0 0% 0% / 0.1);
+
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 33 50% 96%;
+    --sidebar-primary: 0 47% 45%;
+    --sidebar-primary-foreground: 33 50% 96%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 33 50% 96%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 0 47% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  /* Typography classes */
+  .font-heading {
+    font-family: "Playfair Display", serif;
+  }
+
+  .font-body {
+    font-family: "Inter", sans-serif;
+  }
+
+  /* Luxury animations */
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--maroon-light));
+  }
+}
