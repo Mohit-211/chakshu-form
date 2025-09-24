@@ -17,7 +17,8 @@ export default function Intro() {
 
           {/* Subtitle */}
           <p className="font-body text-lg md:text-xl text-muted-foreground leading-relaxed">
-            This isn’t a swipe-and-forget app. Mocha Date is built to understand{" "}
+            This isn’t a swipe-and-forget app. Petal & Promise is built to
+            understand{" "}
             <span className="text-accent font-medium">who you are</span> and{" "}
             <span className="text-accent font-medium">
               what you’re looking for
@@ -76,7 +77,7 @@ export default function Intro() {
           {/* CTA */}
           <div className="pt-6 space-y-2">
             <Button
-              aria-label="Start Mocha Date application"
+              aria-label="Start Petal & Promise application"
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-maroon-light px-8 py-3 text-lg shadow-elegant transition-smooth"
               onClick={() => navigate("/application")}

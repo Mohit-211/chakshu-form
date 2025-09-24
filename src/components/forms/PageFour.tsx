@@ -61,11 +61,11 @@ export default function PageFour({ data, onNext, onBack }: PageFourProps) {
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Why Mocha Date */}
+            {/* Why Petal & Promise */}
             <div>
               <Label>
-                Why do you want to join Mocha Date instead of continuing with
-                apps or organic dating? *
+                Why do you want to join Petal & Promise instead of continuing
+                with apps or organic dating? *
               </Label>
               <Textarea
                 rows={3}
@@ -149,8 +149,8 @@ export default function PageFour({ data, onNext, onBack }: PageFourProps) {
                 required
               />
               <Label htmlFor="consent" className="text-sm leading-snug">
-                I agree to provide accurate information and allow Mocha Date to
-                use it for matchmaking.
+                I agree to provide accurate information and allow Petal &
+                Promise to use it for matchmaking.
               </Label>
             </div>
 

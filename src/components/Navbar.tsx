@@ -5,8 +5,11 @@ export default function Navbar() {
     <nav className="bg-background/90 backdrop-blur-md border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
         {/* Logo */}
-        <a href="https://mochadate.com" className="flex items-center gap-2">
-          <img src={logo} alt="Mocha Date" className="h-10 w-auto" />
+        <a
+          href="https://apple.petalandpromise.com"
+          className="flex items-center gap-2"
+        >
+          <img src={logo} alt="Petal & Promise" className="h-10 w-auto" />
         </a>
 
         {/* Title */}
