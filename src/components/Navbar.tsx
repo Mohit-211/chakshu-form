@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
         {/* Logo */}
         <a
-          href="https://apple.petalandpromise.com"
+          href="https://apply.petalandpromise.in"
           className="flex items-center gap-2"
         >
           <img src={logo} alt="Petal & Promise" className="h-10 w-auto" />
